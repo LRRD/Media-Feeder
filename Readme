@@ -1,0 +1,10 @@
+The media feeder is an instrument add-on for our river models.
+This device is filled with dry media, either mixed, or a single color, and the desired dispensing rate is input and can be started/stopped at any time.
+Standard device limits are 0.4 - 30.0 g/s, but depending on mix and calibration curve, the max may be lower.
+The device has a pre-programmed curve for easy operation, but for better accuracy we recommend calibrating the device.
+This can be done with a gram scale and beaker.
+The calibration routine is managed by the device and dispenses at different rates for different lengths of time to collect data points, and the user inputs the dispensed grams of media.
+The controller calculates a logarithmic regression that best fits the data points input during calibration and applies the new curve, and saves it to the EEPROM.
+This way it won't have to be done again unless the media mix changes, even if the device is powered off and unplugged.
+The device has a hard coded maximum travel range and upon calibration references the newly generated curve to determine if a more conservative maximum setpoint needs to be added.
+If the user wants, they can revert to factory settings at any time.
